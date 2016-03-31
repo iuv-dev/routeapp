@@ -1,10 +1,10 @@
 {
-  "name": "routeapp",
+  "name": "ClydeShen",
   "description": "A starter project for AngularJS",
   "version": "0.0.0",
   "homepage": "https://github.com/iuv-dev/routeapp.git",
   "license": "MIT",
-  "private": false,
+  "private": true,
   "dependencies": {
     "angular": "~1.4.0",
     "angular-route": "~1.4.0",

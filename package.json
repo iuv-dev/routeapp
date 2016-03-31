@@ -1,6 +1,6 @@
 {
-  "name": "iuv-dev",
-  "private": false,
+  "name": "ClydeShen",
+  "private": true,
   "version": "0.0.1",
   "description": "A project for AT route map using AngularJS",
   "repository": "https://github.com/iuv-dev/routeapp.git",
