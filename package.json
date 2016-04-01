@@ -3,7 +3,10 @@
   "private": true,
   "version": "0.0.1",
   "description": "A project for AT route map using AngularJS",
-  "repository": "https://github.com/iuv-dev/routeapp.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iuv-dev/routeapp.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "bower": "1.7.7",
