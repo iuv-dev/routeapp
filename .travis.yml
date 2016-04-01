@@ -4,6 +4,7 @@ node_js:
 sudo: true
 before_script:
   - npm -g install npm@latest
+  - npm install -g bower
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
   - npm start > /dev/null &
