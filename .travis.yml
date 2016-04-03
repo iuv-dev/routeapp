@@ -1,11 +1,8 @@
 language: node_js
 node_js:
-  - "4.4"
-sudo: true
+  - "0.10"
+
 before_script:
-  - npm -g install npm@latest
-  - chmod +x bower
-  - chmod +x iuv-dev/routeapp
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
   - npm start > /dev/null &
@@ -15,7 +12,3 @@ before_script:
 script:
   - node_modules/.bin/karma start karma.conf.js --no-auto-watch --single-run --reporters=dots --browsers=Firefox
   - node_modules/.bin/protractor e2e-tests/protractor.conf.js --browser=firefox
-
-
-notifications:
-  slack: iuv-team:XzfHX4ViKN8598kPnrnMv4HY
