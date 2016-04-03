@@ -1,42 +1,71 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../lib/css/normalize.css">
-  <link rel="stylesheet" href="app.css">
-  <script src="../lib/js/modernizr-2.8.3.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../lib/css/normalize.css">
+    <link rel="stylesheet" href="../lib/css/ionic.min.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="../lib/js/modernizr-2.8.3.min.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#/Home">Home</a></li>
-    <li><a href="#/About">About</a></li>
-  </ul>
+<ion-side-menus>
+    <ion-side-menu side="left">
+        <ion-header-bar align-title="center" class="bar bar-header bar-stable">
+            <h3 class="title">Menu</h3>
+        </ion-header-bar>
+        <ion-content class="has-header">
+            <ion-list>
+                <ion-item nav-clear class="item" href="#/Home" >
+                    Home
+                </ion-item>
+                <ion-item nav-clear class="item" href="#/About">
+                    About
+                </ion-item>
+            </ion-list>
+        </ion-content>
+        <div class="bar bar-footer">
+            <div class="title">
+                <div>Angular seed app: v<span app-version></span></div>
+            </div>
+        </div>
+    </ion-side-menu>
+    <ion-side-menu-content>
+        <ion-nav-view name="main" animation="slide-left-right"></ion-nav-view>
+    </ion-side-menu-content>
+</ion-side-menus>
 
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
 
-  <div ng-view></div>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
 
-  <div>Angular seed app: v<span app-version></span></div>
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-  <script src="../lib/js/angular.min.js"></script>
-  <script src="../lib/js/angular-route.min.js"></script>
-  <script src="app.js"></script>
-  <script src="Home/Home.js"></script>
-  <script src="About/About.js"></script>
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<!--<script src="../lib/js/angular.min.js"></script>-->
+<script src="../lib/js/ionic.bundle.min.js"></script>
+<script src="../lib/js/angular-route.min.js"></script>
+<script src="app.js"></script>
+<script src="Home/Home.js"></script>
+<script src="About/About.js"></script>
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
 </body>
 </html>
