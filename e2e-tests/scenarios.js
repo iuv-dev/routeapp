@@ -11,7 +11,7 @@ describe('my app', function() {
   });
 
 
-  describe('view1', function() {
+  describe('Home', function() {
 
     beforeEach(function() {
       browser.get('index.html#/Home');
@@ -26,14 +26,14 @@ describe('my app', function() {
   });
 
 
-  describe('view2', function() {
+  describe('About', function() {
 
     beforeEach(function() {
-      browser.get('index.html#/view2');
+      browser.get('index.html#/About');
     });
 
 
-    it('should render view2 when user navigates to /view2', function() {
+    it('should render About when user navigates to /About', function() {
       expect(element.all(by.css('[ng-view] p')).first().getText()).
         toMatch(/partial for view 2/);
     });
