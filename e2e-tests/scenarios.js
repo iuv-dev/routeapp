@@ -20,7 +20,7 @@ describe('my app', function() {
 
     it('should render Home when user navigates to /Home', function() {
       expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/partial for view 1/);
+        toMatch(/partial for Home/);
     });
 
   });
@@ -35,7 +35,7 @@ describe('my app', function() {
 
     it('should render About when user navigates to /About', function() {
       expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/partial for view 2/);
+        toMatch(/partial for About/);
     });
 
   });
