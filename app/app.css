@@ -1,0 +1,13 @@
+.scroll-content {
+    padding: 16px;
+}
+
+.item-complex.item-icon-left {
+    border: 0;
+    border-bottom: solid 1px white;
+    margin: 0px;
+}
+
+.angular-google-map-container {
+    height: 400px;
+}

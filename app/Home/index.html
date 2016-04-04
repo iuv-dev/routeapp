@@ -1,1 +1,14 @@
-<p>This is the partial for Home.</p>
+<ion-view title="Home">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <h1>Home</h1>
+        <p>This is the partial for Home.</p>
+        <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+    </ion-content>
+</ion-view>
+<script src="../../lib/js/lodash.js"></script>
+<script src="../../lib/js/angular-simple-logger.min.js"></script>
+<script src="../../lib/js/angular-google-maps.min.js"></script>
+

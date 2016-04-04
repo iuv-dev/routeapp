@@ -1,25 +1,28 @@
 <ion-side-menus>
     <ion-side-menu side="left">
-        <ion-header-bar align-title="center" class="bar bar-header bar-stable">
-            <h3 class="title">Menu</h3>
+        <ion-header-bar align-title="center" class="bar bar-header">
+            <h2 class="title">Menu</h2>
         </ion-header-bar>
         <ion-content class="has-header">
             <ion-list>
-                <ion-item nav-clear class="item" href="#/menu/Home" >
-                    Home
+                <ion-item nav-clear class="item item-icon-left" href="#/menu/Home" menu-close>
+                    <i class="icon ion-ios-home-outline"></i>Home
                 </ion-item>
-                <ion-item nav-clear class="item" href="#/menu/About">
-                    About
+                <ion-item nav-clear class="item item-icon-left" href="#/menu/About" menu-close>
+                    <i class="icon ion-ios-people-outline"></i> About
                 </ion-item>
             </ion-list>
         </ion-content>
         <div class="bar bar-footer">
             <div class="title">
-                <div>Angular seed app: v<span app-version></span></div>
+                <div>Map v<span app-version></span></div>
             </div>
         </div>
     </ion-side-menu>
-    <ion-side-menu-content>
+    <ion-pane ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button class="button-clear"><i class="icon ion-chevron-left"></i>Back</ion-nav-back-button>
+        </ion-nav-bar>
         <ion-nav-view name="mainContent" animation="slide-right-left"></ion-nav-view>
-    </ion-side-menu-content>
+    </ion-pane>
 </ion-side-menus>

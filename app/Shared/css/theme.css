@@ -1,0 +1,23 @@
+.AT-background {
+    background-color: #17232f;
+}
+
+.menu, .menu > .bar, .menu a.item-content, .menu > .bar-header > .title {
+    background-color: #17232f;
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.view-container {
+    background: white;
+}
+
+.view-container .bar-header, .bar-header .title, .bar-header .button {
+    background-color: #17232f;
+    color: white !important;
+}
+
+.pane {
+    background: transparent;
+}
