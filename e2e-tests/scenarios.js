@@ -19,7 +19,7 @@ describe('my app', function() {
 
 
     it('should render Home when user navigates to /menu/Home', function() {
-      expect(element.all(by.css('[ion-view] p')).first().getText()).
+      expect(element.all(by.css('ion-view p')).first().getText()).
         toMatch(/partial for Home/);
     });
 
@@ -34,7 +34,7 @@ describe('my app', function() {
 
 
     it('should render About when user navigates to /menu/About', function() {
-      expect(element.all(by.css('[ion-view] p')).first().getText()).
+      expect(element.all(by.css('ion-view p')).first().getText()).
         toMatch(/partial for About/);
     });
 
