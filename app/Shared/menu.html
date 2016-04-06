@@ -1,28 +1,11 @@
-<ion-side-menus>
-    <ion-side-menu side="left">
-        <ion-header-bar align-title="center" class="bar bar-header">
-            <h2 class="title">Menu</h2>
-        </ion-header-bar>
-        <ion-content class="has-header">
-            <ion-list>
-                <ion-item nav-clear class="item item-icon-left" href="#/menu/Home" menu-close>
-                    <i class="icon ion-ios-home-outline"></i>Home
-                </ion-item>
-                <ion-item nav-clear class="item item-icon-left" href="#/menu/About" menu-close>
-                    <i class="icon ion-ios-people-outline"></i> About
-                </ion-item>
-            </ion-list>
-        </ion-content>
-        <div class="bar bar-footer">
-            <div class="title">
-                <div>Map v<span app-version></span></div>
-            </div>
+<div class="scrollable">
+    <h1 class="scrollable-header app-name">My App <small> {{ 'v%VERSION%' | interpolate }}</small></h1>
+    <div class="scrollable-content">
+        <div class="list-group" ui-turn-off='uiSidebarLeft'>
+            <a class="list-group-item" href="#/Home">Home
+                <i class="fa fa-chevron-right pull-right"></i></a>
+            <a class="list-group-item" href="#/About">About
+                <i class="fa fa-chevron-right pull-right"></i></a>
         </div>
-    </ion-side-menu>
-    <ion-pane ion-side-menu-content>
-        <ion-nav-bar class="bar-stable">
-            <ion-nav-back-button class="button-clear"><i class="icon ion-chevron-left"></i>Back</ion-nav-back-button>
-        </ion-nav-bar>
-        <ion-nav-view name="mainContent" animation="slide-right-left"></ion-nav-view>
-    </ion-pane>
-</ion-side-menus>
+    </div>
+</div>

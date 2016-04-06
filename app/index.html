@@ -11,10 +11,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>My AngularJS App</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../lib/css/normalize.css">
-    <link rel="stylesheet" href="../lib/css/ionic.min.css">
+    <!--<link rel="stylesheet" href="../lib/css/ionic.min.css">-->
+    <link rel="stylesheet" href="../lib/css/mobile-angular-ui-hover.min.css">
+    <link rel="stylesheet" href="../lib/css/mobile-angular-ui-base.min.css">
+    <link rel="stylesheet" href="../lib/css/mobile-angular-ui-desktop.min.css">
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="Shared/css/theme.css">
     <script src="../lib/js/modernizr-2.8.3.min.js"></script>
@@ -22,8 +27,49 @@
     <script src="cordova.js"></script>
 
 </head>
-<body>
-<ion-nav-view></ion-nav-view>
+<body ui-prevent-touchmove-defaults>
+
+<div class="sidebar sidebar-left"
+     ng-include="'Shared/menu.html'">
+
+    <!--<div class="scrollable">-->
+        <!--<h1 class="scrollable-header app-name">My App <small> {{ 'v%VERSION%' | interpolate }}</small></h1>-->
+        <!--<div class="scrollable-content">-->
+            <!--<div class="list-group" ui-turn-off='uiSidebarLeft'>-->
+                <!--<a class="list-group-item" href="#/Home">Home-->
+                    <!--<i class="fa fa-chevron-right pull-right"></i></a>-->
+                <!--<a class="list-group-item" href="#/About">About-->
+                    <!--<i class="fa fa-chevron-right pull-right"></i></a>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+
+
+<div class="app">
+
+    <div class="navbar navbar-app navbar-absolute-top">
+        <div class="btn-group pull-left">
+            <a ui-toggle="uiSidebarLeft" class="btn sidebar-toggle">
+                <i class="fa fa-bars"></i> Menu
+            </a>
+        </div>
+        <div class="navbar-brand navbar-brand-center" ui-yield-to="title">
+            APP
+        </div>
+    </div>
+
+    <!-- App Body -->
+    <div class="app-body">
+        <div class="app-content">
+            <ng-view></ng-view>
+        </div>
+    </div>
+
+</div><!-- ~ .app -->
+
+<!-- Modals and Overlays -->
+<div ui-yield-to="modals"></div>
 
 
 <!--[if lt IE 7]>
@@ -31,21 +77,19 @@
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
-
-<!-- In production use:
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
--->
-<!--<script src="../lib/js/angular.min.js"></script>-->
-<script src="../lib/js/ionic.bundle.min.js"></script>
+<script src="../lib/js/angular.min.js"></script>
+<!--<script src="../lib/js/ionic.bundle.min.js"></script>-->
 <script src="../lib/js/angular-route.min.js"></script>
+<script src="../lib/js/mobile-angular-ui.min.js"></script>
+<script src="../lib/js/mobile-angular-ui.gestures.min.js"></script>
 <script src="app.js"></script>
 <script src="Home/Home.js"></script>
 <script src="About/About.js"></script>
 <script src="components/version/version.js"></script>
 <script src="components/version/version-directive.js"></script>
 <script src="components/version/interpolate-filter.js"></script>
-<script src="../../lib/js/lodash.js"></script>
-<script src="../../lib/js/angular-simple-logger.min.js"></script>
-<script src="../../lib/js/angular-google-maps.min.js"></script>
+<!--<script src="../../lib/js/lodash.js"></script>-->
+<!--<script src="../../lib/js/angular-simple-logger.min.js"></script>-->
+<!--<script src="../../lib/js/angular-google-maps.min.js"></script>-->
 </body>
 </html>
