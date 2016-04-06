@@ -29,20 +29,8 @@
 </head>
 <body ui-prevent-touchmove-defaults>
 
-<div class="sidebar sidebar-left"
-     ng-include="'Shared/menu.html'">
-
-    <!--<div class="scrollable">-->
-        <!--<h1 class="scrollable-header app-name">My App <small> {{ 'v%VERSION%' | interpolate }}</small></h1>-->
-        <!--<div class="scrollable-content">-->
-            <!--<div class="list-group" ui-turn-off='uiSidebarLeft'>-->
-                <!--<a class="list-group-item" href="#/Home">Home-->
-                    <!--<i class="fa fa-chevron-right pull-right"></i></a>-->
-                <!--<a class="list-group-item" href="#/About">About-->
-                    <!--<i class="fa fa-chevron-right pull-right"></i></a>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
+<div ng-include="'Shared/menu.html'"
+     class="sidebar sidebar-left">
 </div>
 
 
@@ -50,9 +38,9 @@
 
     <div class="navbar navbar-app navbar-absolute-top">
         <div class="btn-group pull-left">
-            <a ui-toggle="uiSidebarLeft" class="btn sidebar-toggle">
+            <div ui-toggle="uiSidebarLeft" class="btn">
                 <i class="fa fa-bars"></i> Menu
-            </a>
+            </div>
         </div>
         <div class="navbar-brand navbar-brand-center" ui-yield-to="title">
             APP
