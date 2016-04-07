@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('myApp.home', [
-        'ngRoute'
+        'ngRoute',
+        'leaflet-directive'
 ])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider
@@ -12,11 +13,7 @@ angular.module('myApp.home', [
     }])
 
     .controller('HomeCtrl', ['$scope',function ($scope) {
-        angular.extend($scope,{
-            defaultChecked:{
-                scrollWheelZoom: false
-            }
-        });
+
     }]);
 
 // var mymap = L.map('#routeMap').setView([51.505, -0.09], 13);
