@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('myApp.home', [
-        // 'ionic',
-        'ngRoute'])
+        'ngRoute'
+])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider
             .when('/Home', {
@@ -10,20 +10,13 @@ angular.module('myApp.home', [
                 controller: 'HomeCtrl'
             });
     }])
-    // .config(['$stateProvider',function ($stateProvider) {
-    //     $stateProvider
-    //         .state('menu.home', {
-    //             url: "/Home",
-    //             views: {
-    //                 'mainContent': {
-    //                     templateUrl: "Home/index.html",
-    //                     controller: 'HomeCtrl'
-    //
-    //                 }
-    //             }
-    //         })
-    // }])
 
-    .controller('HomeCtrl', [function () {
-
+    .controller('HomeCtrl', ['$scope',function ($scope) {
+        angular.extend($scope,{
+            defaultChecked:{
+                scrollWheelZoom: false
+            }
+        });
     }]);
+
+// var mymap = L.map('#routeMap').setView([51.505, -0.09], 13);
