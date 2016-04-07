@@ -16,13 +16,4 @@ angular.module('myApp', [
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.otherwise('/Home');
     }])
-// .config(['$stateProvider','$urlRouterProvider',function ($stateProvider, $urlRouterProvider) {
-//     $stateProvider
-//         .state('menu', {
-//             url: "/menu",
-//             abstract: true,
-//             templateUrl: "Shared/menu.html",
-//         })
-//     $urlRouterProvider.otherwise('/menu/Home');
-//     // $routeProvider.otherwise('/Home');
-// }]);
+

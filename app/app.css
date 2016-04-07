@@ -11,3 +11,7 @@
 .angular-google-map-container {
     height: 400px;
 }
+#btn-menu
+{
+    z-index: 1;
+}

@@ -16,10 +16,8 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
     <meta name="description" content="">
     <link rel="stylesheet" href="../lib/css/normalize.css">
-    <!--<link rel="stylesheet" href="../lib/css/ionic.min.css">-->
     <link rel="stylesheet" href="../lib/css/mobile-angular-ui-hover.min.css">
     <link rel="stylesheet" href="../lib/css/mobile-angular-ui-base.min.css">
-    <link rel="stylesheet" href="../lib/css/mobile-angular-ui-desktop.min.css">
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="Shared/css/theme.css">
     <script src="../lib/js/modernizr-2.8.3.min.js"></script>
@@ -30,7 +28,7 @@
 <body ui-prevent-touchmove-defaults>
 
 <div ng-include="'Shared/menu.html'"
-     class="sidebar sidebar-left">
+     class="sidebar sidebar-left" id="leftMenu">
 </div>
 
 
@@ -38,9 +36,9 @@
 
     <div class="navbar navbar-app navbar-absolute-top">
         <div class="btn-group pull-left">
-            <div ui-toggle="uiSidebarLeft" class="btn">
+            <a href ui-toggle="leftMenu" class="btn" id="btn-menu">
                 <i class="fa fa-bars"></i> Menu
-            </div>
+            </a>
         </div>
         <div class="navbar-brand navbar-brand-center" ui-yield-to="title">
             APP
@@ -66,7 +64,6 @@
 <![endif]-->
 
 <script src="../lib/js/angular.min.js"></script>
-<!--<script src="../lib/js/ionic.bundle.min.js"></script>-->
 <script src="../lib/js/angular-route.min.js"></script>
 <script src="../lib/js/mobile-angular-ui.min.js"></script>
 <script src="../lib/js/mobile-angular-ui.gestures.min.js"></script>
@@ -76,8 +73,6 @@
 <script src="components/version/version.js"></script>
 <script src="components/version/version-directive.js"></script>
 <script src="components/version/interpolate-filter.js"></script>
-<!--<script src="../../lib/js/lodash.js"></script>-->
-<!--<script src="../../lib/js/angular-simple-logger.min.js"></script>-->
-<!--<script src="../../lib/js/angular-google-maps.min.js"></script>-->
+
 </body>
 </html>
