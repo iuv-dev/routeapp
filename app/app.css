@@ -16,3 +16,6 @@
     z-index: 1;
 }
 #routeMap { height: 180px; }
+#search { margin-bottom: 15px}
+#search > input#mapSearch{ border: solid 1px #CACACA; font-size: 21px;}
+#search > label[for='mapSearch']{ }
