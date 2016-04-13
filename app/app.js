@@ -6,7 +6,6 @@ angular.module('myApp', [
         'ngRoute',
         'mobile-angular-ui',
         'mobile-angular-ui.gestures',
-        
         'myApp.home',
         'myApp.about',
         'myApp.version'

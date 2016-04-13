@@ -13,7 +13,13 @@ angular.module('myApp.home', [
     }])
 
     .controller('HomeCtrl', ['$scope',function ($scope) {
-
+        angular.extend($scope, {
+            Auckland: {
+                lat: -36.88566207736626,
+                lng: 174.76140975952148,
+                zoom: 12
+            }
+        });
     }]);
 
 // var mymap = L.map('#routeMap').setView([51.505, -0.09], 13);
