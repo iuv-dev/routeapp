@@ -16,7 +16,7 @@ angular.module('myApp.home', [
         angular.extend($scope, {
             Auckland: {
                 lat: -36.88566207736626,
-                lng: 174.76140975952148,
+                lng: 174.76140975952148 ,
                 zoom: 12
             }
         });
