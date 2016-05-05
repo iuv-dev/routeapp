@@ -2,6 +2,7 @@
 
 angular.module('myApp.home', [
         'ngRoute',
+        'pouchdb',
         'leaflet-directive'
 ])
     .config(['$routeProvider', function ($routeProvider) {
@@ -13,6 +14,8 @@ angular.module('myApp.home', [
     }])
 
     .controller('HomeCtrl', ['$scope',function ($scope) {
+
+
         angular.extend($scope, {
             Auckland: {
                 lat: -36.88566207736626,
